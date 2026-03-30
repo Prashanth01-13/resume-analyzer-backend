@@ -1,12 +1,8 @@
 services:
   - type: web
     name: resume-analyzer-backend
-    env: java
+    env: docker
     plan: free
-
-    buildCommand: ./mvnw clean package -DskipTests
-    startCommand: java -jar target/resume-analyzer-backend-0.0.1-SNAPSHOT.jar
-
-    envVars:
-      - key: JAVA_VERSION
-        value: "21"
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/
