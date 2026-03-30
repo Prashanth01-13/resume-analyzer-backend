@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://resume-analyzer-frontend-green.vercel.app/")
 public class ResumeController {
 
     @Autowired
